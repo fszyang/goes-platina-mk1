@@ -63,7 +63,7 @@ func (status status) Main(args ...string) error {
 }
 
 func (status) chip(goes string) error {
-	const thpat = "Broadcom (Corporation|Limited) Device b96[05]"
+	const thpat = "Device b96[05]"
 
 	out, err := exec.Command("/usr/bin/lspci").Output()
 	if err != nil {
